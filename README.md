@@ -27,5 +27,67 @@ Event Manager is a simple and intuitive web application designed to help users e
 
 1. **Clone the repository:**
 
+
    ```bash
-   
+   git clone https://github.com//event-manager.git
+   cd event-manager
+  
+---
+2. **Set up a virtual environment and install dependencies:**
+
+'''bash
+
+python -m venv venv
+source venv/bin/activate   # On Windows use: venv\Scripts\activate
+pip install -r requirements.txt
+---
+3.**Run the application:**
+
+'''bash
+
+flask run
+---
+4.**Access the app:**
+
+Open your browser and go to http://localhost:5000
+----
+##Usage
+Register a new user account or login with existing credentials.
+Add new events using the task interface.
+Navigate to "My Events" to view, edit, or set reminders for your events.
+---
+**Repository Structure**
+'''graphql
+
+event-manager/
+│
+├── app.py              # Main Flask application file
+├── requirements.txt    # Python dependencies
+├── README.md           # Project documentation
+├── static/             # Static files (CSS, JavaScript, images)
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── templates/          # HTML templates for Flask
+│   ├── login.html
+│   ├── register.html
+│   ├── tasks.html
+│   └── events.html
+├── .gitignore          # Git ignore file
+└── venv/               # Virtual environment folder (optional, usually gitignored)
+---
+##Contributing
+Contributions are welcome! Please fork the repository and create a pull request with your changes.
+-----
+##License
+This project is licensed under the MIT License - see the LICENSE file for details.
+---
+##Contact
+For any questions or suggestions, please open an issue or contact me at bcsaiharika@gmail.com
+
+Happy event managing! 🎉
+
+
+
+
+
