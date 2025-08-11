@@ -31,4 +31,3 @@ Event Manager is a simple and intuitive web application designed to help users e
    ```bash
    git clone https://github.com/your-username/event-manager.git
    cd event-manager
-````
