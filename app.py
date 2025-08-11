@@ -55,11 +55,3 @@ def event(event_id):
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-import os
-from flask import Flask
-
-app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY')
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
-
