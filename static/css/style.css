@@ -1,0 +1,366 @@
+
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #e0f2f7, #d1e7ed); /* Soft blue gradient background */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: #ffffff; /* Pure white for content area */
+            padding: 25px;
+            border-radius: 15px; /* Slightly more rounded corners */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Stronger, softer shadow */
+            box-sizing: border-box;
+            border: 1px solid #e0e0e0; /* Subtle border */
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50; /* Darker, more prominent heading color */
+            margin-bottom: 25px;
+            font-size: 1.8em;
+            letter-spacing: 0.5px;
+        }
+
+        /* Form Styles */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px; /* Increased gap for better spacing */
+            margin-bottom: 25px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        input[type="datetime-local"], /* Added for reminder modal */
+        textarea {
+            width: calc(100% - 24px); /* Account for padding and border */
+            padding: 12px;
+            border: 1px solid #c0d0e0; /* Softer border color */
+            border-radius: 8px; /* More rounded inputs */
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #4a6bdf; /* Primary color on focus */
+            box-shadow: 0 0 0 3px rgba(74, 107, 223, 0.2); /* Soft glow on focus */
+            outline: none;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px; /* More rounded buttons */
+            background: linear-gradient(to right, #4a6bdf, #6a8be0); /* Gradient for primary buttons */
+            color: white;
+            font-size: 17px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #3a5bbd, #5a7bd0); /* Darker gradient on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Navigation/Action Buttons */
+        .nav-buttons, .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px; /* Increased gap */
+            margin-bottom: 30px;
+        }
+
+        .nav-buttons button, .action-buttons button {
+            flex: 1;
+            max-width: 190px;
+            background: #8e9eab; /* Muted grey for non-active nav/secondary buttons */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+        }
+
+        .nav-buttons button:hover, .action-buttons button:hover {
+            background: #7a8a9b;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .nav-buttons button.active {
+            background: linear-gradient(to right, #4a6bdf, #6a8be0); /* Primary gradient for active nav */
+            color: white;
+            box-shadow: 0 4px 8px rgba(74, 107, 223, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Event Controls (Search/Sort) */
+        .event-controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            align-items: center;
+        }
+
+        .search-box {
+            flex: 1;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 15px; /* Adjusted icon position */
+            color: #888; /* Softer icon color */
+            font-size: 1.1em;
+        }
+
+        #searchEvent {
+            width: calc(100% - 45px); /* Account for icon and padding */
+            padding: 10px 12px 10px 45px; /* Adjusted padding */
+            border: 1px solid #c0d0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .sort-select {
+            padding: 10px 15px;
+            border: 1px solid #c0d0e0;
+            border-radius: 8px;
+            background-color: white;
+            font-size: 16px;
+            cursor: pointer;
+            appearance: none; /* Remove default select arrow */
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%234a6bdf%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.2-6.4H18.2c-5%200-9.3%201.8-13.2%206.4-3.9%204.5-6%2010-6%2016.3%200%206.2%202.1%2011.7%206%2016.3l118.2%20126.4c3.9%204.5%208.4%206.8%2013.2%206.8s9.3-2.3%2013.2-6.8L287%20102c3.9-4.5%206-10%206-16.3s-2.1-11.7-6-16.3z%22%2F%3E%3C%2Fsvg%3E');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 12px;
+            transition: border-color 0.3s ease;
+        }
+
+        .sort-select:hover {
+            border-color: #4a6bdf;
+        }
+
+        /* Events List */
+        .events-header {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr;
+            padding: 12px 18px;
+            background-color: #f0f5f8; /* Lighter header background */
+            font-weight: bold;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            color: #556677; /* Softer header text color */
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .events-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 420px; /* Slightly increased height */
+            overflow-y: auto;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding-right: 5px;
+            background-color: #fdfdfd; /* Very light background for the list area */
+        }
+
+        .event-item {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr;
+            align-items: center;
+            padding: 14px 18px;
+            border-bottom: 1px solid #f0f0f0; /* Lighter separator */
+            background-color: white;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .event-item:nth-child(even) {
+            background-color: #f9fbfd; /* Alternate row color */
+        }
+
+        .event-item:last-child {
+            border-bottom: none;
+        }
+
+        .event-item:hover {
+            background-color: #eef5fa; /* More noticeable hover */
+            transform: translateX(3px); /* Slight slide effect on hover */
+        }
+
+        .event-item .title {
+            font-weight: 600;
+            color: #334455;
+        }
+
+        .event-item .date {
+            color: #778899;
+            font-size: 0.95em;
+        }
+
+        .event-actions {
+            display: flex;
+            gap: 6px; /* Slightly reduced gap for action buttons */
+            justify-content: flex-end;
+        }
+
+        .event-actions button {
+            padding: 7px 12px;
+            font-size: 0.8em;
+            border-radius: 6px;
+            color: white;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            box-shadow: none; /* Remove individual button shadows */
+            font-weight: normal;
+            gap: 5px;
+        }
+
+        .event-actions button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .event-actions button.edit-btn { background-color: #007bff; }
+        .event-actions button.edit-btn:hover { background-color: #0056b3; }
+        .event-actions button.reminder-btn { background-color: #ffc107; color: #333; } /* Yellow for reminder */
+        .event-actions button.reminder-btn:hover { background-color: #e0a800; }
+        .event-actions button.delete-btn { background-color: #dc3545; }
+        .event-actions button.delete-btn:hover { background-color: #c82333; }
+
+        /* Action Buttons below list */
+        .action-buttons button.btn-primary {
+            background: linear-gradient(to right, #28a745, #3cb85a); /* Green for Add */
+        }
+        .action-buttons button.btn-primary:hover {
+            background: linear-gradient(to right, #218838, #36a750);
+        }
+
+        .action-buttons button.btn-secondary {
+            background: linear-gradient(to right, #17a2b8, #20b0c8); /* Teal for Export */
+        }
+        .action-buttons button.btn-secondary:hover {
+            background: linear-gradient(to right, #138496, #1ca0b5);
+        }
+
+        .action-buttons button.btn-danger {
+            background: linear-gradient(to right, #dc3545, #e54d5d); /* Red for Clear All */
+        }
+        .action-buttons button.btn-danger:hover {
+            background: linear-gradient(to right, #c82333, #d13a4a);
+        }
+
+        /* Modals */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.7); /* Darker overlay */
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(3px); /* Subtle blur effect */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 35px; /* Increased padding */
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3); /* More prominent shadow */
+            width: 90%;
+            max-width: 550px; /* Slightly wider modal */
+            position: relative;
+            animation: fadeInScale 0.3s ease-out; /* New animation */
+            border: 1px solid #e0e0e0;
+        }
+
+        .close-button {
+            color: #888;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 32px; /* Larger close button */
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: #333;
+            transform: rotate(90deg); /* Rotate on hover */
+        }
+
+        .modal h2 {
+            margin-top: 0;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            font-size: 1.6em;
+        }
+
+        /* Utility Classes */
+        .hidden {
+            display: none !important;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .link-text {
+            color: #4a6bdf;
+            cursor: pointer;
+            text-decoration: none;
+            transition: text-decoration 0.2s ease, color 0.2s ease;
+            font-weight: 500;
+        }
+
+        .link-text:hover {
+            text-decoration: underline;
+            color: #3a5bbd;
+        }
+
+        .error-message {
+            color: #e74c3c; /* Brighter red for errors */
+            font-size: 0.9em;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        /* Animations */
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    
