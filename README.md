@@ -1,3 +1,4 @@
+
 # Event Manager
 
 Event Manager is a simple and intuitive web application designed to help users efficiently manage their events and tasks. It features user authentication and provides a clean interface to create, view, edit, and set reminders for events.
@@ -16,10 +17,10 @@ Event Manager is a simple and intuitive web application designed to help users e
 
 ## Technologies Used
 
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Python Flask
-- **Database:** (Specify your database here, e.g., SQLite, MongoDB)
-- **Other Libraries/Frameworks:** (Add if applicable)
+- **Frontend:** HTML, CSS, JavaScript  
+- **Backend:** Python Flask  
+- **Database:** (Specify your database here, e.g., SQLite, MongoDB)  
+- **Other Libraries/Frameworks:** (Add if applicable)  
 
 ---
 
@@ -27,38 +28,42 @@ Event Manager is a simple and intuitive web application designed to help users e
 
 1. **Clone the repository:**
 
-
    ```bash
-   git clone https://github.com//event-manager.git
+   git clone https://github.com/your-username/event-manager.git
    cd event-manager
-  
----
+````
+
 2. **Set up a virtual environment and install dependencies:**
 
-'''bash
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # On Windows use: venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
 
-python -m venv venv
-source venv/bin/activate   # On Windows use: venv\Scripts\activate
-pip install -r requirements.txt
+3. **Run the application:**
+
+   ```bash
+   flask run
+   ```
+
+4. **Access the app:**
+
+   Open your browser and go to [http://localhost:5000](http://localhost:5000)
+
 ---
-3.**Run the application:**
 
-'''bash
+## Usage
 
-flask run
+* Register a new user account or login with existing credentials.
+* Add new events using the task interface.
+* Navigate to **My Events** to view, edit, or set reminders for your events.
+
 ---
-4.**Access the app:**
 
-Open your browser and go to http://localhost:5000
-----
-##Usage
-Register a new user account or login with existing credentials.
-Add new events using the task interface.
-Navigate to "My Events" to view, edit, or set reminders for your events.
----
-**Repository Structure**
-'''graphql
+## Repository Structure
 
+```
 event-manager/
 │
 ├── app.py              # Main Flask application file
@@ -75,19 +80,28 @@ event-manager/
 │   └── events.html
 ├── .gitignore          # Git ignore file
 └── venv/               # Virtual environment folder (optional, usually gitignored)
+```
+
 ---
-##Contributing
+
+## Contributing
+
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
------
-##License
-This project is licensed under the MIT License - see the LICENSE file for details.
+
 ---
-##Contact
-For any questions or suggestions, please open an issue or contact me at bcsaiharika@gmail.com
 
-Happy event managing! 🎉
+## License
 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+---
 
+## Contact
 
+For any questions or suggestions, please open an issue or contact me at [bcsaiharika@gmail.com](mailto:bcsaiharika@gmail.com)
 
+---
+
+*Happy event managing!* 🎉
+
+```
